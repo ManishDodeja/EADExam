@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import AnotherUserParticipation from './components/AnotherUserParticipation';
 import PollDisplay from './components/PollDisplay';
+
 import UserParticipation from './components/UserParticipation';
 
 
@@ -13,11 +15,16 @@ const App = () => {
       { id: 4, label: "C#", votes: 0 }
     ]
   });
-
+  
   const [userSelect , setUserSelect]=useState(false)
 
   const handleUser =(state)=>{
     setUserSelect(state)
+  }
+
+  const [resetSelect, setResetSelect]=useState(false)
+  const handleResetSelect =(state)=>{
+    setResetSelect(state)
   }
 
   const handleVote = (choiceId) => {
@@ -36,6 +43,8 @@ const App = () => {
       <PollDisplay pollData={pollData} />
       <UserParticipation pollData={pollData} handleVote={handleVote} userSelect={userSelect} handleUser={handleUser} />
       
+      {userSelect && (<AnotherUserParticipation />)}
+
     </div>
   );
 };
