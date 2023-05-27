@@ -4,7 +4,7 @@ const PollDisplay = ({pollData}) => {
   
   return (
     <div>
-      <h2>{pollData.question}</h2>
+      <h2 className="question">{pollData.question}</h2>
       <ul>
         {pollData.choices.map(choice => (
           <li key={choice.id}>

@@ -7,6 +7,7 @@ import UserParticipation from './components/UserParticipation';
 
 
 const App = () => {
+  // for managing poll data and method handle vote for managing data
   const [pollData, setPollData] = useState({
     question: "What is your favorite programming language?",
     choices: [
@@ -16,17 +17,6 @@ const App = () => {
       { id: 4, label: "C#", votes: 0 }
     ]
   });
-  
-  const [userSelect , setUserSelect]=useState(false)
-
-  const handleUser =(state)=>{
-    setUserSelect(state)
-  }
-
-  const [resetSelect, setResetSelect]=useState(false)
-  const handleResetSelect =(state)=>{
-    setResetSelect(state)
-  }
 
   const handleVote = (choiceId) => {
     const updatedPollData = {
@@ -38,6 +28,19 @@ const App = () => {
     setPollData(updatedPollData);
   };
 
+  // this is when user selected then avoid voting again
+  const [userSelect , setUserSelect]=useState(false)
+  const handleUser =(state)=>{
+    setUserSelect(state)
+  }
+
+  // this is when user want to reset the selected vote 
+  const [resetSelect, setResetSelect]=useState(false)
+  const handleResetSelect =(state)=>{
+    setResetSelect(state)
+  }
+
+  
   return (
     <div>
       <h1>Poll App</h1>
