@@ -4,6 +4,7 @@ import PollDisplay from './components/PollDisplay';
 import ThankyouMessage from './components/ThankyouMessage';
 
 import UserParticipation from './components/UserParticipation';
+import Timer from './TaskB/Timer';
 
 
 const App = () => {
@@ -49,7 +50,7 @@ const App = () => {
       
       {userSelect && (<AnotherUserParticipation />)}
       {userSelect && (<ThankyouMessage/>)}
-
+      <Timer/>
     </div>
   );
 };

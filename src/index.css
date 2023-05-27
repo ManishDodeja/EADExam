@@ -23,3 +23,8 @@ h1{
 ul{
   border: 2px solid green;
 }
+.time{
+  text-align: center;
+  font-size: xx-large;
+  border: 2px solid red;
+}
