@@ -12,3 +12,14 @@ code {
     monospace;
 }
 
+.question {
+  background-color: aqua;
+  text-align: center;
+}
+
+h1{
+  text-align: center;
+}
+ul{
+  border: 2px solid green;
+}
