@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AnotherUserParticipation from './components/AnotherUserParticipation';
 import PollDisplay from './components/PollDisplay';
+import ThankyouMessage from './components/ThankyouMessage';
 
 import UserParticipation from './components/UserParticipation';
 
@@ -44,6 +45,7 @@ const App = () => {
       <UserParticipation pollData={pollData} handleVote={handleVote} userSelect={userSelect} handleUser={handleUser} />
       
       {userSelect && (<AnotherUserParticipation />)}
+      {userSelect && (<ThankyouMessage/>)}
 
     </div>
   );
